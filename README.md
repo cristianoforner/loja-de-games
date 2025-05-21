@@ -9,7 +9,8 @@ O objetivo é construir uma API REST para gerenciar produtos de uma loja de game
 ✔️ CRUD completo de **Produtos**  
 ✔️ CRUD completo de **Categorias**  
 ✔️ Relacionamento `OneToMany` entre Categoria e Produto  
-✔️ Consultas personalizadas por nome, tipo e faixa de preço  
+✔️ Consultas personalizadas por nome, tipo e faixa de preço
+✔️ Suporte a imagens de produtos via URL   
 ✔️ Testes realizados via **Insomnia**
 
 ---
@@ -47,6 +48,28 @@ spring.datasource.password=senha
 spring.jpa.hibernate.ddl-auto=update
 
 4. Rode o projeto no Spring Tool Suite ou IntelliJ com suporte Maven.
+
+🎮 Categorias cadastradas
+
+ID	Tipo	Descrição
+1	Esportes	Jogos de futebol, basquete e outras modalidades esportivas
+2	Corrida	Simuladores e jogos arcade de corrida
+3	RPG	Jogos com progressão de personagem e elementos narrativos
+4	Aventura	Jogos com exploração, história e combate
+
+📷 Exemplo de produto com imagem
+
+{
+  "nome": "Spider-Man: Miles Morales",
+  "descricao": "Aventura do herói Miles em Nova York.",
+  "preco": 219.90,
+  "imagem": "https://ik.imagekit.io/qbcb7oaeq/loja-de-games/imagens/spiderman.png?updatedAt=1747835389802",
+  "categoria": {
+    "id": 4
+  }
+}
+
+
 
 📫 Testes com Insomnia
 
