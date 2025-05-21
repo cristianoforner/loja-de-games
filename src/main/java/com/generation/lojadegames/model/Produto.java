@@ -34,6 +34,10 @@ public class Produto {
     @ManyToOne // Muitos produtos podem pertencer a uma única categoria
     @JsonIgnoreProperties("produtos") // Evita loop infinito ao serializar JSON
     private Categoria categoria;
+    
+    @Size(max = 1000, message = "A URL da imagem deve ter no máximo 1000 caracteres")
+    private String imagem; // URL da imagem do produto
+
 
     // Getters e Setters
 
@@ -84,5 +88,14 @@ public class Produto {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
+    
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+
 }
 
